@@ -2,22 +2,22 @@ package com.example.test.models;
 
 public class BoardModel {
 
-   private UserModel userModel1;
-   private UserModel userModel2;
+    private PlayerModel playerModel1;
+    private PlayerModel playerModel2;
 
-   public UserModel getUserModel1() {
-      return userModel1;
-   }
+    public PlayerModel getPlayerModel1() {
+        return playerModel1;
+    }
 
-   public void setUserModel1(UserModel userModel1) {
-      this.userModel1 = userModel1;
-   }
+    public void setPlayerModel1(PlayerModel playerModel) {
+        this.playerModel1 = playerModel1;
+    }
 
-   public UserModel getUserModel2() {
-      return userModel2;
-   }
+    public PlayerModel getPlayerModel2() {
+        return playerModel2;
+    }
 
-   public void setUserModel2(UserModel userModel2) {
-      this.userModel2 = userModel2;
-   }
+    public void setPlayerModel2(UserModel playerModel) {
+        this.playerModel2 = playerModel2;
+    }
 }
