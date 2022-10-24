@@ -67,6 +67,6 @@ public class CardModel {
     public void combat(CardModel c){
         long resta = this.life - c.damage;
         System.out.println(
-                String.format(("El jugador %s ha hecho %d al jugador %s"), this.name,resta,c.name));
+                String.format(("La carta %s ha hecho %d a la carta %s"), this.name,resta,c.name));
     }
 }
