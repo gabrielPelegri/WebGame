@@ -6,7 +6,7 @@ public class Dañado extends StatusModel{
 
     public Dañado(CardModel cardModel) {
         super(cardModel);
-        cardModel.setLife(cardModel.getLife() - 1);
+        cardModel.setHealth(cardModel.getHealth() - 1);
     }
 
     @Override
@@ -17,6 +17,6 @@ public class Dañado extends StatusModel{
     @Override
     public void setCardModel(CardModel cardModel) {
         this.cardModel = cardModel;
-        cardModel.setLife(cardModel.getLife() - 1);
+        cardModel.setHealth(cardModel.getHealth() - 1);
     }
 }

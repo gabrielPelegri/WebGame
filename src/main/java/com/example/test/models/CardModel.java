@@ -9,7 +9,7 @@ public class CardModel {
     private Long damage;
     private ArrayList<CardModel> status;
 
-    final private Long maxHealth = 100L;
+    final private int maxHealth = 100;
     private CardModel cardModelObjetivo;
 
     public String getName() {
