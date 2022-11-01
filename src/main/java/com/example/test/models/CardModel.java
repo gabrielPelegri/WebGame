@@ -8,7 +8,8 @@ public class CardModel {
     private Long health;
     private Long damage;
     private ArrayList<CardModel> status;
-    private Long life;
+
+    final private Long maxHealth = 100L;
     private CardModel cardModelObjetivo;
 
     public String getName() {
@@ -43,14 +44,6 @@ public class CardModel {
         this.status = status;
     }
 
-    public Long getLife() {
-        return life;
-    }
-
-    public void setLife(Long life) {
-        this.life = life;
-    }
-
     public CardModel getCardModelObjetivo() {
         return cardModelObjetivo;
     }
@@ -60,14 +53,14 @@ public class CardModel {
     }
 
     public String victory(CardModel c) {
-        if (this.life > c.life) {
+        if (this.health > c.health) {
             return String.format("Soy el ganador de nombre %s", this.name);
         }
         return String.format("Soy el ganador de nombre %s", c.name);
     }
 
     public void combat(CardModel c) {
-        long resta = this.life - c.damage;
+        long resta = this.health - c.damage;
         System.out.println(
                 String.format(("La carta %s ha hecho %d a la carta %s"), this.name, resta, c.name));
     }
