@@ -2,8 +2,6 @@ package com.example.test.models.statusModels;
 
 import com.example.test.models.CardModel;
 
-import javax.smartcardio.Card;
-
 public abstract class StatusModel {
 
     CardModel cardModel;
