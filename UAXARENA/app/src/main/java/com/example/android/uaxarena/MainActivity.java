@@ -6,7 +6,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
-    WebView webView;
+    WebView mWebView;
 
 
     @Override
@@ -14,11 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     //   webView.getSettings().setJavaScriptEnabled(true);
-        webView = (WebView) findViewById(R.id.web_view);
-        webView.loadUrl("file://index.html");
+        //  webView.getSettings().setJavaScriptEnabled(true);
+        //  webView.getSettings().setAllowFileAccess(true);
+        //  webView.getSettings().setAllowContentAccess(true);
+        //   mWebView.getSettings().setAllowFileAccessFromFileURLs(true);
+        mWebView = (WebView) findViewById(R.id.web_view);
+        mWebView.loadUrl("file:///assets/index.html");
 
-        webView.setWebViewClient(new WebViewClient(){
+        mWebView.setWebViewClient(new WebViewClient(){
             public boolean shouldOverrideUrlLoading(WebView view, String url){
                 return false;
             }
