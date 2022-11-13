@@ -2,10 +2,10 @@ package com.example.test.data;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "users")
 public class UserData {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
