@@ -15,18 +15,18 @@
         </div>
 
         <div class="form-content">
-            <form th:action="@{/login}"  th:object="${userModel}" class="cod-form">
+            <form th:action="@{/login}" class="cod-form">
                 <div class="form-title">
                     <h3>Iniciar Sesión</h3>
                 </div>
 
                 <div class="input-group">
-                    <input type="email" class="form-input" name="form-input" id="correo" th:field="*{mail}">
+                    <input type="email" class="form-input" name="form-input" id="correo">
                     <label class="label" for="correo">e-mail</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="password" class="form-input" name="form-input" id="pass" th:field="*{password}">
+                    <input type="password" class="form-input" name="form-input" id="pass">
                     <label class="label" for="pass">Contraseña</label>
                 </div>
 

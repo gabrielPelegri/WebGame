@@ -61,4 +61,7 @@ public class UserData {
         this.id = id;
     }
 
+    public UserData() {
+    }
+
 }

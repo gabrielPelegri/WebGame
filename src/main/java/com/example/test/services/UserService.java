@@ -1,6 +1,6 @@
 package com.example.test.services;
 
-import com.example.test.models.UserModel;
+import com.example.test.data.UserData;
 import com.example.test.models.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,8 +22,8 @@ public class UserService {
     private UserRepository userRepository;
 
     @Transactional(readOnly = true)
-    public LoginStatus login(String eMail, String password) {
-        Optional<UserModel> usuario = userRepository.findByEmail(eMail);
+    public LoginStatus login(String mail, String password) {
+        Optional<UserData> usuario = userRepository.findByMail(mail);
         if (!usuario.isPresent()) {
             return LoginStatus.USER_NOT_FOUND;
         } else if (!usuario.get().getPassword().equals(password)) {
@@ -34,18 +34,32 @@ public class UserService {
     }
 
     @Transactional(readOnly = true)
-    public UserModel findByEmail(String email) {
-        return userRepository.findByEmail(email).orElse(null);
+    public UserData findByEmail(String mail) {
+        return userRepository.findByMail(mail).orElse(null);
     }
 
     @Transactional(readOnly = true)
-    public UserModel findById(Long usuarioId) {
+    public UserData findById(Long usuarioId) {
         return userRepository.findById(usuarioId).orElse(null);
     }
 
+    @Transactional
+    public UserData findByUsername(String username) {
+        return userRepository.findByName(username).orElse(null);
+    }
+
     @Transactional(readOnly = true)
-    public List<UserModel> findAll() {
+    public List<UserData> findAll() {
         return userRepository.findAll();
     }
 
+    @Transactional
+    public UserData save(UserData user) {
+        return userRepository.save(user);
+    }
+
+    @Transactional
+    public void remove(UserData user) {
+        userRepository.delete(user);
+    }
 }
