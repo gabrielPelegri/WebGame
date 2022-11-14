@@ -7,6 +7,7 @@ public class UserModel {
     private String password;
     private String mail;
     private Integer age;
+    private Integer wins;
 
     public Long getId() {
         return id;
@@ -46,6 +47,17 @@ public class UserModel {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Integer getWins() {
+        return wins;
+    }
+
+    public void setWins(Integer wins) {
+        this.wins = wins;
+    }
+
+    public UserModel() {
     }
 
 }

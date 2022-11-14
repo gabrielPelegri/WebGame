@@ -21,6 +21,9 @@ public class UserData {
     @Column(name = "age", nullable = false)
     private Integer age;
 
+    @Column(name = "wins", nullable = false)
+    private Integer wins;
+
     public String getName() {
         return name;
     }
@@ -59,6 +62,14 @@ public class UserData {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Integer getWins() {
+        return wins;
+    }
+
+    public void setWins(Integer wins) {
+        this.wins = wins;
     }
 
     public UserData() {

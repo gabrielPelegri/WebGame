@@ -15,19 +15,19 @@
         </div>
 
         <div class="form-content">
-            <form th:action="@{/login}" class="cod-form">
+            <form th:action="@{/login}" method="post" class="cod-form">
                 <div class="form-title">
                     <h3>Iniciar Sesión</h3>
                 </div>
 
                 <div class="input-group">
-                    <input type="email" class="form-input" name="form-input" id="correo">
-                    <label class="label" for="correo">e-mail</label>
+                    <input type="email" class="form-input" name="form-input" id="mail">
+                    <label class="label" for="mail">e-mail</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="password" class="form-input" name="form-input" id="pass">
-                    <label class="label" for="pass">Contraseña</label>
+                    <input type="password" class="form-input" name="form-input" id="password">
+                    <label class="label" for="password">Contraseña</label>
                 </div>
 
                 <div class="input-group">
