@@ -21,7 +21,7 @@ public class UserData {
     @Column(name = "age", nullable = false)
     private Integer age;
 
-    @Column(name = "wins", nullable = false)
+    @Column(name = "wins")
     private Integer wins;
 
     public String getName() {
