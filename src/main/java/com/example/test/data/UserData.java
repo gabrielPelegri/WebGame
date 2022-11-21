@@ -4,7 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 
-@Document("users")
+@Document(collection = "users")
 public class UserData {
     @Id
     private Long id;
