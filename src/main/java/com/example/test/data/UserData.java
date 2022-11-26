@@ -1,13 +1,14 @@
 package com.example.test.data;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 
 @Document(collection = "users")
 public class UserData {
     @Id
-    private Long id;
+    private ObjectId id;
     private String name;
     private String password;
     private String mail;
@@ -37,10 +38,10 @@ public class UserData {
     public void setAge(Integer age) {
         this.age = age;
     }
-    public Long getId() {
+    public ObjectId getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
     public Integer getWins() {
