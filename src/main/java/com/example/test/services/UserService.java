@@ -1,6 +1,7 @@
 package com.example.test.services;
 
 import com.example.test.data.UserData;
+import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -33,12 +34,12 @@ public class UserService {
     }
 
     @Transactional(readOnly = true)
-    public UserData findByEmail(String mail) {
+    public UserData findByMail(String mail) {
         return userRepository.findByMail(mail).orElse(null);
     }
 
     @Transactional(readOnly = true)
-    public UserData findById(Long usuarioId) {
+    public UserData findById(ObjectId usuarioId) {
         return userRepository.findById(usuarioId).orElse(null);
     }
 

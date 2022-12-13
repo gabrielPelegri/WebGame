@@ -1,5 +1,6 @@
 package com.example.test.authentication;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,12 +16,12 @@ public class ManagerUserSession {
     // una autorización sencilla. En los métodos de controllers
     // comprobamos si el id del usuario logeado coincide con el obtenido
     // desde la URL
-    public void logearUsuario(Long idUsuario) {
+    public void logearUsuario(ObjectId idUsuario) {
         session.setAttribute("idUsuarioLogeado", idUsuario);
     }
 
-    public Long usuarioLogeado() {
-        return (Long) session.getAttribute("idUsuarioLogeado");
+    public ObjectId usuarioLogeado() {
+        return (ObjectId) session.getAttribute("idUsuarioLogeado");
     }
 
     public void logout() {
