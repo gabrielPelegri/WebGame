@@ -29,7 +29,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        final ConnectionString connectionString = new ConnectionString("mongodb+srv://username:root@cluster0.gijfdfb.mongodb.net/?retryWrites=true&w=majority");
+        final ConnectionString connectionString = new ConnectionString("mongodb+srv://username:root@cluster0.thabl34.mongodb.net/?retryWrites=true&w=majority");
         final MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .serverApi(ServerApi.builder()
