@@ -1,12 +1,15 @@
 package com.example.test.models;
 
+import java.util.ArrayList;
+
 public class CardModel {
 
     private String name;
     private Long health;
     private Long damage;
-    private String status;
-    private Long life;
+    private ArrayList<CardModel> status;
+
+    final private int maxHealth = 100;
     private CardModel cardModelObjetivo;
 
     public String getName() {
@@ -33,20 +36,12 @@ public class CardModel {
         this.damage = damage;
     }
 
-    public String getStatus() {
+    public ArrayList<CardModel> getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(ArrayList<CardModel> status) {
         this.status = status;
-    }
-
-    public Long getLife() {
-        return life;
-    }
-
-    public void setLife(Long life) {
-        this.life = life;
     }
 
     public CardModel getCardModelObjetivo() {
@@ -57,16 +52,16 @@ public class CardModel {
         this.cardModelObjetivo = cardModelObjetivo;
     }
 
-    public String victory(CardModel c){
-        if(this.life > c.life){
-            return String.format("Soy el ganador de nombre %s",this.name);
+    public String victory(CardModel c) {
+        if (this.health > c.health) {
+            return String.format("Soy el ganador de nombre %s", this.name);
         }
-        return String.format("Soy el ganador de nombre %s",c.name);
+        return String.format("Soy el ganador de nombre %s", c.name);
     }
 
-    public void combat(CardModel c){
-        long resta = this.life - c.damage;
+    public void combat(CardModel c) {
+        long resta = this.health - c.damage;
         System.out.println(
-                String.format(("La carta %s ha hecho %d a la carta %s"), this.name,resta,c.name));
+                String.format(("La carta %s ha hecho %d a la carta %s"), this.name, resta, c.name));
     }
 }
