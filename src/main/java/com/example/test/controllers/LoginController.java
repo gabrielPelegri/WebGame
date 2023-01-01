@@ -32,6 +32,8 @@ public class LoginController {
             return "login";
         }
         UserService.LoginStatus loginStatus = userService.login(userData.getMail(), userData.getPassword());
+        System.out.println(userData.getMail());
+        System.out.println(userData.getPassword());
 
         if (loginStatus == UserService.LoginStatus.LOGIN_OK) {
 
