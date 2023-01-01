@@ -1,6 +1,7 @@
 package com.example.test.models;
 
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 
 public class PlayerModel {
 
@@ -8,6 +9,15 @@ public class PlayerModel {
     private Integer health;
     private ArrayList<CardModel> hand;
     private ArrayList<CardModel> deck;
+    private Semaphore semaphore;
+
+    public PlayerModel(String name, Integer health, ArrayList<CardModel> hand, ArrayList<CardModel> deck) {
+        this.name = name;
+        this.health = health;
+        this.hand = hand;
+        this.deck = deck;
+        this.semaphore = new Semaphore(1);
+    }
 
     public String getName() {
         return name;
