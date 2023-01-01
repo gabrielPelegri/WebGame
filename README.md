@@ -8,4 +8,4 @@ description: >-
 
 Link al repositorio: https://github.com/gabrielPelegri/WebGame.git
 
-Link al GitBook:&#x20;
+Link al GitBook: [https://web-game.gitbook.io/call-of-duty-web-game/](https://web-game.gitbook.io/call-of-duty-web-game/)&#x20;
