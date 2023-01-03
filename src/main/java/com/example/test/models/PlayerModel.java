@@ -18,6 +18,13 @@ public class PlayerModel {
         this.deck = deck;
         this.semaphore = new Semaphore(1);
     }
+    public PlayerModel(UserModel userModel) {
+        this.name = userModel.getName();
+        this.health = 30;
+        this.hand = new ArrayList<>();
+        this.deck = new ArrayList<>();
+        this.semaphore = new Semaphore(1);
+    }
 
     public String getName() {
         return name;

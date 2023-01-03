@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head xmlns:th="http://www.thymeleaf.org">
     <meta charset="UTF-8">
     <title>Inicio</title>
 </head>
@@ -9,7 +9,10 @@
     <h1 class="text-white">UAX ARENA - CALL OF DUTY</h1>
 </div>
 <div>
-    <button>JUEGA AHORA</button>
+    <form th:action="@{/game}">
+        <input type="submit" value="Jugar" />
+    </form>
+
 </div>
 </body>
 </html>
