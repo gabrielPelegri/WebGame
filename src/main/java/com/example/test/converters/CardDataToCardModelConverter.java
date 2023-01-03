@@ -3,7 +3,9 @@ package com.example.test.converters;
 import com.example.test.data.CardData;
 import com.example.test.models.CardModel;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CardDataToCardModelConverter implements Converter<CardData, CardModel> {
 
     @Override

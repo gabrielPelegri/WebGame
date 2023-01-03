@@ -38,6 +38,7 @@ public class GameController {
         UserModel userModel = userDataToUserModelConverter
                 .convert(userService.findById(managerUserSession.usuarioLogeado()));
         PlayerModel playerModel = new PlayerModel(userModel);
+        PlayerModel playerModel2 = new PlayerModel(userModel);
         List<CardModel> cardModelList = cardService.findAll();
         Random random = new Random();
         int randomCard = random.nextInt(cardModelList.size());
