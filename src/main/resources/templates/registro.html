@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+    <title>Registro de usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="cod-container">
+    <div class="form-header">
+        <img src="img/Logo.png" alt="Logo de CodigoMasters">
+        <h1>UAX<span>ARENA</span></h1>
+    </div>
+    <div class="form-content">
+        <form th:action="@{/registro}" method="post">
+            <div class="form-title">
+                <h3>Registro</h3>
+            </div>
+            <label for="username">Nombre de usuario:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <br>
+            <label for="age">Edad:</label><br>
+            <input type="number" id="age" name="age"><br>
+            <br>
+            <label for="mail">Email:</label><br>
+            <input type="email" id="mail" name="mail"><br>
+            <br>
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>
