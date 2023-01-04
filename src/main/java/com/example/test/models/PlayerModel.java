@@ -23,7 +23,15 @@ public class PlayerModel {
 
     public PlayerModel(UserModel userModel) {
         this.name = userModel.getName();
-        this.health = Long.valueOf(30);
+        this.health = 100L;
+        this.hand = new ArrayList<>();
+        this.deck = new ArrayList<>();
+        this.semaphore = new Semaphore(1);
+    }
+
+    public PlayerModel(){
+        this.name = "IA";
+        this.health = 100L;
         this.hand = new ArrayList<>();
         this.deck = new ArrayList<>();
         this.semaphore = new Semaphore(1);
@@ -33,7 +41,7 @@ public class PlayerModel {
         // Check if the player has any cards left in their deck
         if (deck.isEmpty()) {
             // The player's deck is empty, so they cannot draw a card
-            System.out.println("You have no more cards left in your deck!");
+            System.out.println("No te quedan cartas en el mazo!");
         } else {
             // Draw a card from the top of the player's deck
             CardModel card = deck.remove(0);
@@ -42,7 +50,7 @@ public class PlayerModel {
             hand.add(card);
 
             // Print a message indicating that the card was drawn
-            System.out.println("Drew a " + card.getName() + " card.");
+            System.out.println("Ha sacado la carta: " + card.getName());
         }
     }
 
@@ -51,11 +59,11 @@ public class PlayerModel {
         // Check if the player has the specified card in their hand
         if (this.getHand().contains(card)) {
             // The player does not have the specified card in their hand
-            System.out.println("You do not have that card in your hand!");
+            System.out.println("No tienes esa carta en la mano!");
         } else {
             // Remove the card from the player's hand and play it
             this.getHand().remove(card);
-            System.out.println("Played a " + card.getName() + " card.");
+            System.out.println("Ha jugado la carta: " + card.getName());
         }
     }
 
@@ -65,12 +73,12 @@ public class PlayerModel {
         // Check if the player has the specified card in their hand
         if (this.getHand().contains(card)) {
             // The player does not have the specified card in their hand
-            System.out.println("You do not have that card in your hand!");
+            System.out.println("No tienes esa carta en la mano!");
         } else {
             // Remove the card from the player's hand and attack with it
             this.getHand().remove(card);
             target.setHealth(target.getHealth() - card.getDamage());
-            System.out.println("Attacked with a " + card.getName() + " card.");
+            System.out.println("Atacoó con la carta: " + card.getName());
         }
     }
 
