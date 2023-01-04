@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="css/all.min.css">
     <meta charset="UTF-8">
     <title>Inicio</title>
 </head>
@@ -8,8 +9,8 @@
 <div>
     <h1 class="text-white">UAX ARENA - CALL OF DUTY</h1>
 </div>
-<div>
-    <form th:action="@{/game}">
+<div class="fa-align-center">
+    <form class="justify-center" th:action="@{/game}">
         <input type="submit" value="Jugar" />
     </form>
 

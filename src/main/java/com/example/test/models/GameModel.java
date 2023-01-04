@@ -40,7 +40,7 @@ public class GameModel {
             semaphore.acquire();
 
             // Get the current player
-            PlayerModel currentPlayer = players.get(turnNumber % players.size());
+            PlayerModel currentPlayer = players.get(turnNumber);
 
 
             // Prompt the current player to take their turn
