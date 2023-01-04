@@ -96,8 +96,16 @@ public class GameModel {
             player.attackWithCard(card, players.get(jugadorObjetivo(turnNumber)).getHand().get(targetIndex));
             // System.out.println("El jugador" + jugadorObjetivo(turnNumber) + "ha perdido " + card.getDamage() + "puntos de vida");
             System.out.println("La carta " + card.getName() + " ha atacado a la carta " + players.get(jugadorObjetivo(turnNumber)).getHand().get(targetIndex).getName());
+            for (int i = 0; i < players.get(jugadorObjetivo(turnNumber)).getHand().size(); i++) {
+                if (players.get(jugadorObjetivo(turnNumber)).getHand().get(i).getHealth() <= 0) {
+                    System.out.println("La carta " + players.get(jugadorObjetivo(turnNumber)).getHand().get(i).getName() + " ha muerto");
+                    players.get(jugadorObjetivo(turnNumber)).getHand().remove(i);
+                    players.get(jugadorObjetivo(turnNumber)).setHealth(players.get(jugadorObjetivo(turnNumber)).getHealth() - 10L);
+                }
+            }
         }
     }
+
 
     // Method to read input from the console
     public int readInput() {
