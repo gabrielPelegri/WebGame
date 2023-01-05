@@ -1,2 +1,0 @@
-# Lógica del juego
-
