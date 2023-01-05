@@ -33,3 +33,6 @@ Nos introduce en el juego y nos explica el tipo de batalla que los usuarios se e
 
 Se introducen los protagonistas de nuestras batallas que acompañará a nuestro usuario. Estos te harán tener mayor inmersión en el juego.
 
+
+
+Pinche aquí para verla: UAX-ARENA
