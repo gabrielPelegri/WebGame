@@ -42,6 +42,14 @@ Definimos a la clase 'Game', para representar una partida con su escenario de ju
 
 Podemos distinguir las clases que realizan la acción de elegir una carta, el ataque de dicha carta o la mano del jugador.
 
+Aquí podemos ver una fragmento de sus atributos principales:
+
+//insertar código//
+
+Una de sus funciones más importantes se recoge en este método:
+
+//insertar código//
+
 ## CONCURRENCIA
 
 ### HILOS y SEMÁFOROS
