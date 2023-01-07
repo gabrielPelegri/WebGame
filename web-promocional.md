@@ -10,10 +10,10 @@ Esta web consta de los siguientes páginas de información y funcionalidad:
 
 * Login
 * Registro
-* Inicio
 * Personajes
 * About us
-* Contact
+* Contacto
+* Inicio
 
 Hemos partido de un estilo muy usual en los videojuegos en el cual se muestra scrolleando o clickando en cada página el contenido de la misma.
 
@@ -27,9 +27,9 @@ El 'Login' es una página donde el usuario podrá ingresar en el juego, al igual
 
 De la misma forma que nuestro 'Login', este funciona para dar soporte y permitir a nuestros usuarios registrarse en nuestra BBDD para permitirles guardar su usuario y jugar a nuestro juego.
 
-### INICIO
+### INTRODUCCIÓN
 
-Nos introduce en el juego y nos explica el tipo de batalla que los usuarios se encontrará en nuestra arena.&#x20;
+Nos introduce en el juego y nos invita a una experiencia única de juego en las batallas que nos encontraremos.
 
 ### PERSONAJES
 
@@ -39,9 +39,13 @@ Se introducen los protagonistas de nuestras batallas que acompañará a nuestro 
 
 Concreta brevemente como es la familia de UAX-ARENA y nos invita a tener un contacto más cercano con nuestros colaboradores del juego.&#x20;
 
-### CONTACT
+### CONTACTO
 
 Es una ayuda que ofrecemos a nuestros usuarios que nos visiten en la web, dónde puede contactar con nosotros rellenado nuestra caja de e-mail y mensaje.
+
+### INICIO
+
+Aquí tendremos un enlace al inicio del juego en el cuál podremos empezar nuestras batallas.
 
 
 
