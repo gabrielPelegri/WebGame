@@ -78,7 +78,7 @@ public class PlayerModel {
             // Remove the card from the player's hand and attack with it
             this.getHand().remove(card);
             target.setHealth(target.getHealth() - card.getDamage());
-            System.out.println("Atacoó con la carta: " + card.getName());
+            System.out.println("Atacó con la carta: " + card.getName());
         }
     }
 
