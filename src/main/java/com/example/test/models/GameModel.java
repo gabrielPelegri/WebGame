@@ -40,7 +40,7 @@ public class GameModel {
             semaphore.acquire();
 
             // Get the current player
-            PlayerModel currentPlayer = players.get(turnNumber);
+            PlayerModel currentPlayer = players.get(jugadorObjetivo(turnNumber));
 
 
             // Prompt the current player to take their turn
@@ -110,9 +110,7 @@ public class GameModel {
     // Method to read input from the console
     public int readInput() {
         Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
+        return scanner.nextInt();
     }
 
-}//end Game class
+}
