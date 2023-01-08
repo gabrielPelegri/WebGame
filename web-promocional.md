@@ -47,6 +47,3 @@ Es una ayuda que ofrecemos a nuestros usuarios que nos visiten en la web, dónde
 
 Aquí tendremos un enlace al inicio del juego en el cuál podremos empezar nuestras batallas.
 
-
-
-Pinche aquí para verla: UAX-ARENA
