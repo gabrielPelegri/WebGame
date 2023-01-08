@@ -16,9 +16,17 @@ Además del transfondo de la concurrencia y cómo hemos usado los hilos y semáf
 
 Definimos la clase 'Card', como representación de una carta jugable. Incluye todas y cada una de sus características y atributos.
 
-Aquí podemos ver una fragmento de sus atributos principales:
+Aquí podemos ver una fragmento de sus atributos principales: &#x20;
 
-//insertar código//
+```java
+    private String name;
+    private Long health;
+    private Long damage;
+    private ArrayList<CardModel> status;
+
+    final private int maxHealth = 100;
+    private CardModel cardModelObjetivo;
+```
 
 Una de sus funciones más importantes se recoge en este método:
 
