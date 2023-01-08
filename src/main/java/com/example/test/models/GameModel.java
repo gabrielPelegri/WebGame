@@ -110,7 +110,9 @@ public class GameModel {
     // Method to read input from the console
     public int readInput() {
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        return input;
     }
 
 }//end Game class
