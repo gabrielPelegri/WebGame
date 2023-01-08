@@ -16,7 +16,7 @@ description: >-
 5. Login y Register web
 6. Login y Register in game
 7. BBDD para almacenar el contenido y usuarios
-8. Versión Móvil y Versión Escritorio
+8. Versión Escritorio
 9. Docker file para el despliegue del juego
 10. Documentación del proyecto detallada
 
