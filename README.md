@@ -6,6 +6,8 @@ description: >-
 
 # Call of Duty - WEB GAME
 
-Link al repositorio: [https://github.com/gabrielPelegri/WebGame.git](./)
+Link al repositorio: [https://github.com/gabrielPelegri/WebGame.git](https://github.com/gabrielPelegri/WebGame.git)
 
-Link al GitBook: [https://web-game.gitbook.io/call-of-duty-web-game/](https://web-game.gitbook.io/call-of-duty-web-game/)&#x20;
+Link al GitBook del la Web: [https://web-game.gitbook.io/call-of-duty-web-game/](https://web-game.gitbook.io/call-of-duty-web-game/)&#x20;
+
+Link al Gitbook de la aplicación Android: [https://web-game.gitbook.io/call-of-duty-android/](https://web-game.gitbook.io/call-of-duty-android/)
