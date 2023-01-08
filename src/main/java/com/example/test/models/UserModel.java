@@ -1,19 +1,21 @@
 package com.example.test.models;
 
+import org.bson.types.ObjectId;
+
 public class UserModel {
 
-    private Long id;
+    private ObjectId id;
     private String name;
     private String password;
     private String mail;
     private Integer age;
     private Integer wins;
 
-    public Long getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 

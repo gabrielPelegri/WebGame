@@ -24,7 +24,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "users";
+        return "GameDb";
     }
 
     @Override

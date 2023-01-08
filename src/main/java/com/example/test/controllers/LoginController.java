@@ -38,7 +38,7 @@ public class LoginController {
             UserData usuario = userService.findByMail(userData.getMail());
             managerUserSession.logearUsuario(usuario.getId());
 
-            return "index";
+            return "Inicio";
         } else if (loginStatus == UserService.LoginStatus.USER_NOT_FOUND) {
             System.out.println("Usuario no encontrado");
             model.addAttribute("error", "No existe usuario");
