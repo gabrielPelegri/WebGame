@@ -23,6 +23,8 @@ Programado en lenguaje HTML5 y con un estilo dado en CSS
 
 El 'Login' es una página donde el usuario podrá ingresar en el juego, al igual que el registro. Más adelante se detallarán estas páginas junto a cómo funcionan relacionándolas con las BBDD.
 
+<figure><img src=".gitbook/assets/login.png" alt=""><figcaption></figcaption></figure>
+
 ### REGISTRO
 
 De la misma forma que nuestro 'Login', este funciona para dar soporte y permitir a nuestros usuarios registrarse en nuestra BBDD para permitirles guardar su usuario y jugar a nuestro juego.
@@ -47,6 +49,3 @@ Es una ayuda que ofrecemos a nuestros usuarios que nos visiten en la web, dónde
 
 Aquí tendremos un enlace al inicio del juego en el cuál podremos empezar nuestras batallas.
 
-
-
-Pinche aquí para verla: UAX-ARENA

@@ -8,7 +8,7 @@ Para su soporte y desarrollo hemos usado aplicaciones como:
 * IntelliJ-IDEA
 * Docker
 * Gitbook
-* Android Studio
 * Figma
 * Git Bash
 * Github Desktop
+* Code-Space de Github
