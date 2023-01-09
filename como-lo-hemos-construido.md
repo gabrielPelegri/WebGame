@@ -319,7 +319,7 @@ De este modo controlaremos que cada jugador no interfiera en el turno del otro y
 
 ### MONGO DB
 
-Para almacenar datos en la nube hemos utilizado la herramienta Mongo DB. A continación se muestra el fragmento de código que hace posible la conexión entre la apliación y la base de datos.
+Para almacenar datos en la nube hemos utilizado la herramienta Mongo DB. A continuación se muestra el fragmento de código que hace posible la conexión entre la apliación y la base de datos.
 
 ```java
 @Configuration
@@ -354,3 +354,39 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 ```
 
 Como muestra el código, la aplicación conecta con la base de datos con nombre "GameDb", la cual cuenta con dos colecciones, una para los usuarios y otro para las cartas.
+
+Es importante señalar que las clases UserModel y CardModel se utilizan como copia local de los datos guardados en la nube. Para ello hemos creado clases que convierten los usuarios y las cartas:&#x20;
+
+```java
+@Service
+public class CardDataToCardModelConverter implements Converter<CardData, CardModel> {
+
+    @Override
+    public CardModel convert(CardData cardData) {
+        CardModel cardModel = new CardModel();
+        cardModel.setName(cardData.getName());
+        cardModel.setHealth(cardData.getHealth());
+        cardModel.setDamage(cardData.getDamage());
+        return cardModel;
+    }
+
+}
+```
+
+```java
+@Service
+public class UserDataToUserModelConverter implements Converter<UserData, UserModel> {
+
+    @Override
+    public UserModel convert(UserData userData) {
+        UserModel userModel = new UserModel();
+        userModel.setId(userData.getId());
+        userModel.setName(userData.getName());
+        userModel.setAge(userData.getAge());
+        userModel.setMail(userData.getMail());
+        userModel.setPassword(userData.getPassword());
+        userModel.setWins(userData.getWins());
+        return userModel;
+    }
+}
+```
