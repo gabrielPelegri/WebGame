@@ -23,8 +23,6 @@ Aquí podemos ver una fragmento de sus atributos principales: &#x20;
     private Long health;
     private Long damage;
     private ArrayList<CardModel> status;
-
-    final private int maxHealth = 100;
     private CardModel cardModelObjetivo;
 ```
 
