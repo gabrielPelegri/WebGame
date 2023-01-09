@@ -8,8 +8,6 @@ public class CardModel {
     private Long health;
     private Long damage;
     private ArrayList<CardModel> status;
-
-    final private int maxHealth = 100;
     private CardModel cardModelObjetivo;
 
     public String getName() {
