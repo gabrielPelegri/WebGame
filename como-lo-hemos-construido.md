@@ -312,3 +312,44 @@ public int readInput() {
 Nos sirven para gestionar cómo funcionan los turnos que tendrán nuestros jugadores. Cada jugador constará de un hilo el cuál tendrá libre flujo de juego mientras sea su turno que terminará al cambio del semáforo, para dejar jugar al sus cartas al otro jugador.
 
 De este modo controlaremos que cada jugador no interfiera en el turno del otro y exista una superposición de los hilos.
+
+
+
+## BASE DE DATOS
+
+### MONGO DB
+
+Para almacenar datos en la nube hemos utilizado la herramienta Mongo DB. A continación se muestra el fragmento de código que hace posible la conexión entre la apliación y la base de datos.
+
+```java
+@Configuration
+@EnableMongoRepositories(basePackages = "com.example.test.services")
+public class MongoConfig extends AbstractMongoClientConfiguration {
+
+    private final List<Converter<?, ?>> converters = new ArrayList<Converter<?, ?>>();
+
+    @Override
+    protected String getDatabaseName() {
+        return "GameDb";
+    }
+
+    @Override
+    public MongoClient mongoClient() {
+        final ConnectionString connectionString = new ConnectionString("mongodb+srv://username:root@cluster0.thabl34.mongodb.net/?retryWrites=true&w=majority");
+        final MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
+                .applyConnectionString(connectionString)
+                .serverApi(ServerApi.builder()
+                        .version(ServerApiVersion.V1)
+                        .build())
+                .build();
+        return MongoClients.create(mongoClientSettings);
+    }
+
+    @Override
+    public Collection<String> getMappingBasePackages() {
+        return Collections.singleton("com.example.test");
+    }
+}
+
+```
+
