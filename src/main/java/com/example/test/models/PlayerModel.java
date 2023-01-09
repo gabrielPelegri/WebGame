@@ -2,23 +2,19 @@ package com.example.test.models;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Semaphore;
 
 public class PlayerModel {
 
     private String name;
     private Long health;
-    private Boolean gameOver;
     private List<CardModel> hand;
     private List<CardModel> deck;
-    private Semaphore semaphore;
 
     public PlayerModel(String name, Long health, ArrayList<CardModel> hand, ArrayList<CardModel> deck) {
         this.name = name;
         this.health = health;
         this.hand = hand;
         this.deck = deck;
-        this.semaphore = new Semaphore(1);
     }
 
     public PlayerModel(UserModel userModel) {
@@ -26,7 +22,6 @@ public class PlayerModel {
         this.health = 100L;
         this.hand = new ArrayList<>();
         this.deck = new ArrayList<>();
-        this.semaphore = new Semaphore(1);
     }
 
     public PlayerModel(){
@@ -34,7 +29,6 @@ public class PlayerModel {
         this.health = 100L;
         this.hand = new ArrayList<>();
         this.deck = new ArrayList<>();
-        this.semaphore = new Semaphore(1);
     }
 
     public void drawCard() {

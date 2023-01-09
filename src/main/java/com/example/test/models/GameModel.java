@@ -9,7 +9,6 @@ public class GameModel {
     // Fields to store the players and the current turn number
     private ArrayList<PlayerModel> players;
     private int turnNumber;
-
     // Field to store the semaphore that controls the flow of the game
     private Semaphore semaphore;
 
@@ -18,7 +17,6 @@ public class GameModel {
         this.players = players;
         this.turnNumber = 0;
         this.semaphore = new Semaphore(1);
-
     }
 
     public int jugadorObjetivo(int turnNumber) {
@@ -40,7 +38,7 @@ public class GameModel {
             semaphore.acquire();
 
             // Get the current player
-            PlayerModel currentPlayer = players.get(jugadorObjetivo(turnNumber));
+            PlayerModel currentPlayer = players.get(jugadorObjetivo(turnNumber-1));
 
 
             // Prompt the current player to take their turn
@@ -97,7 +95,7 @@ public class GameModel {
             // System.out.println("El jugador" + jugadorObjetivo(turnNumber) + "ha perdido " + card.getDamage() + "puntos de vida");
             System.out.println("La carta " + card.getName() + " ha atacado a la carta " + players.get(jugadorObjetivo(turnNumber)).getHand().get(targetIndex).getName());
             for (int i = 0; i < players.get(jugadorObjetivo(turnNumber)).getHand().size(); i++) {
-                if (players.get(jugadorObjetivo(turnNumber)).getHand().get(i).getHealth() <= 0) {
+                if (players.get(jugadorObjetivo(turnNumber)).getHand().get(i).getHealth() <= 0L) {
                     System.out.println("La carta " + players.get(jugadorObjetivo(turnNumber)).getHand().get(i).getName() + " ha muerto");
                     players.get(jugadorObjetivo(turnNumber)).getHand().remove(i);
                     players.get(jugadorObjetivo(turnNumber)).setHealth(players.get(jugadorObjetivo(turnNumber)).getHealth() - 10L);
