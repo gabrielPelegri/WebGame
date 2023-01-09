@@ -353,3 +353,4 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
 ```
 
+Como muestra el código, la aplicación conecta con la base de datos con nombre "GameDb", la cual cuenta con dos colecciones, una para los usuarios y otro para las cartas.
