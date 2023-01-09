@@ -390,3 +390,82 @@ public class UserDataToUserModelConverter implements Converter<UserData, UserMod
     }
 }
 ```
+
+
+
+### INICIO DE SESIÓN
+
+Por último mostramos como hemos construido la lógica para inciar sesión con usuarios existentes en la base de datos.
+
+&#x20;La siguiente clase nos sirve para crear una variable de sesión HTTP en la que se almacena el id del usuario.
+
+```java
+@Component
+public class ManagerUserSession {
+
+    @Autowired
+    HttpSession session;
+
+    // Añadimos el id de usuario en la sesión HTTP para hacer
+    // una autorización sencilla. En los métodos de controllers
+    // comprobamos si el id del usuario logeado coincide con el obtenido
+    // desde la URL
+    public void logearUsuario(ObjectId idUsuario) {
+        session.setAttribute("idUsuarioLogeado", idUsuario);
+    }
+
+    public ObjectId usuarioLogeado() {
+        return (ObjectId) session.getAttribute("idUsuarioLogeado");
+    }
+
+    public void logout() {
+        session.setAttribute("idUsuarioLogeado", null);
+    }
+}
+```
+
+En la capa de servicio para los usuarios, además de implementar todas las funciones necesarias para la obtención de información del repositorio hemos añadido las siguientes líneas de código:
+
+<pre class="language-java"><code class="lang-java"><strong>    public enum LoginStatus {LOGIN_OK, USER_NOT_FOUND, ERROR_PASSWORD}
+</strong><strong>    
+</strong><strong>    @Transactional(readOnly = true)
+</strong>    public LoginStatus login(String mail, String password) {
+        Optional&#x3C;UserData> usuario = userRepository.findByMail(mail);
+        if (!usuario.isPresent()) {
+            return LoginStatus.USER_NOT_FOUND;
+        } else if (!usuario.get().getPassword().equals(password)) {
+            return LoginStatus.ERROR_PASSWORD;
+        } else {
+            return LoginStatus.LOGIN_OK;
+        }
+    }
+</code></pre>
+
+La variable que devuelve la función login es utilizada por el controller para verificar que la información introducida en la página es válida:
+
+<pre class="language-java"><code class="lang-java"><strong>    @PostMapping("/login")
+</strong>    public String loginPost(@ModelAttribute UserData userData, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            return "login";
+        }
+        UserService.LoginStatus loginStatus = userService.login(userData.getMail(), userData.getPassword());
+
+        if (loginStatus == UserService.LoginStatus.LOGIN_OK) {
+
+            UserData usuario = userService.findByMail(userData.getMail());
+            managerUserSession.logearUsuario(usuario.getId());
+
+            return "Inicio";
+        } else if (loginStatus == UserService.LoginStatus.USER_NOT_FOUND) {
+            System.out.println("Usuario no encontrado");
+            model.addAttribute("error", "No existe usuario");
+            return "login";
+        } else if (loginStatus == UserService.LoginStatus.ERROR_PASSWORD) {
+            System.out.println("Contraseña incorrecta");
+            model.addAttribute("error", "Contraseña incorrecta");
+            return "login";
+        }
+
+        return "login";
+    }
+</code></pre>
