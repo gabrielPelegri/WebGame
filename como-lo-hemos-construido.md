@@ -469,3 +469,5 @@ La variable que devuelve la función login es utilizada por el controller para v
         return "login";
     }
 </code></pre>
+
+Como ultimo paso hemos desplegado la aplicación en Render utilizando el Dockerfile.&#x20;
