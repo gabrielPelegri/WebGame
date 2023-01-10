@@ -53,6 +53,8 @@ Concreta brevemente como es la familia de UAX-ARENA y nos invita a tener un cont
 
 Es una ayuda que ofrecemos a nuestros usuarios que nos visiten en la web, dónde puede contactar con nosotros rellenado nuestra caja de e-mail y mensaje.
 
+<figure><img src=".gitbook/assets/contacto (1).png" alt=""><figcaption></figcaption></figure>
+
 ### INICIO
 
 Aquí tendremos un enlace al inicio del juego en el cuál podremos empezar nuestras batallas.
