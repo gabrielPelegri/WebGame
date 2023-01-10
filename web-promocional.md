@@ -29,9 +29,13 @@ El 'Login' es una página donde el usuario podrá ingresar en el juego, al igual
 
 De la misma forma que nuestro 'Login', este funciona para dar soporte y permitir a nuestros usuarios registrarse en nuestra BBDD para permitirles guardar su usuario y jugar a nuestro juego.
 
+<figure><img src=".gitbook/assets/Registro (1).png" alt=""><figcaption></figcaption></figure>
+
 ### INTRODUCCIÓN
 
 Nos introduce en el juego y nos invita a una experiencia única de juego en las batallas que nos encontraremos.
+
+<figure><img src=".gitbook/assets/Introduccion.png" alt=""><figcaption></figcaption></figure>
 
 ### PERSONAJES
 
