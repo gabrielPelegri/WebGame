@@ -1,5 +1,13 @@
 ### Juegos de Programación Concurrente
 
+# Call of Duty - WEB GAME
+
+Realizado por:
+
+* Chiara Boccaletti
+* Gabriel Pelegri Riis
+* José Luis Oviedo
+
 Link al repositorio: https://github.com/gabrielPelegri/WebGame.git
 
 Link al repositorio de aplicación Android: https://github.com/chiarab22/UAX-ARENA.git
