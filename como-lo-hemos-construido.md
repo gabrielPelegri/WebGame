@@ -10,7 +10,17 @@ Ahora podremos ver una breve explicación de las clases, en las cuáles explicar
 
 Además del transfondo de la concurrencia y cómo hemos usado los hilos y semáforos en el proyecto.
 
+## UML
+
+Para implementar las clases hemos partido de estos diseños UML que nos han facilitado la implementación de la lógica. Aquí mostramos algunos de ellos.
+
+<figure><img src=".gitbook/assets/UMLr.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/loginr.png" alt=""><figcaption></figcaption></figure>
+
 ## CLASES
+
+
 
 ### CARD
 
