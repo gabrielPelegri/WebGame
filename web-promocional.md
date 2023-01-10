@@ -29,7 +29,7 @@ El 'Login' es una página donde el usuario podrá ingresar en el juego, al igual
 
 De la misma forma que nuestro 'Login', este funciona para dar soporte y permitir a nuestros usuarios registrarse en nuestra BBDD para permitirles guardar su usuario y jugar a nuestro juego.
 
-<figure><img src=".gitbook/assets/Registro (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Registro.png" alt=""><figcaption></figcaption></figure>
 
 ### INTRODUCCIÓN
 
@@ -41,9 +41,13 @@ Nos introduce en el juego y nos invita a una experiencia única de juego en las 
 
 Se introducen los protagonistas de nuestras batallas que acompañará a nuestro usuario. Estos te harán tener mayor inmersión en el juego.
 
+<figure><img src=".gitbook/assets/personajes.png" alt=""><figcaption></figcaption></figure>
+
 ### ABOUT US
 
 Concreta brevemente como es la familia de UAX-ARENA y nos invita a tener un contacto más cercano con nuestros colaboradores del juego.&#x20;
+
+<figure><img src=".gitbook/assets/about.png" alt=""><figcaption></figcaption></figure>
 
 ### CONTACTO
 
